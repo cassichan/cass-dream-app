@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.css'],
 })
 export class ServerComponent {
-  // : type is not required due to type inference
-  serverId: number = 10;
-  serverStatus: string = 'offline';
+  serverId = 10;
+  serverStatus = 'offline';
   getServerStatus() {
     return this.serverStatus;
   }
