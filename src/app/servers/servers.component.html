@@ -1,3 +1,4 @@
+<!-- Add server and display server name -->
 <label>Server name</label>
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 <button
@@ -10,8 +11,17 @@
 <p [innerText]="allowNewServer"></p>
 <p>{{ serverCreationStatus }}</p>
 
-
-
+<!-- Create, display, reset username -->
+<label>User name</label>
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<p>{{ userName }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="!userName"
+  (click)="resetUsername()"
+>
+  Reset username
+</button>
 
 <!-- <app-server></app-server>
 <app-server></app-server> -->
