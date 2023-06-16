@@ -8,8 +8,11 @@
 >
   Add server
 </button>
-<p [innerText]="allowNewServer"></p>
-<p>{{ serverCreationStatus }}</p>
+
+<!-- <p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p> -->
+
+<p *ngIf = "serverCreated">Server was created, server name is {{ serverName }}</p>
 
 <!-- Create, display, reset username -->
 <label>User name</label>
