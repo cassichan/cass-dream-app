@@ -13,11 +13,12 @@
 <p>{{ serverCreationStatus }}</p> -->
 
 <!-- Use ngIf directive to conditionally render different strings when serverCreated is true or false -->
-<p *ngIf = "serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+<p *ngIf="serverCreated; else noServer">
+  Server was created, server name is {{ serverName }}
+</p>
 <!-- <p *ngIf = "!serverCreated">No server was created!</p> -->
 <ng-template #noServer>
-<p>No server was created!
-</p>
+  <p>No server was created!</p>
 </ng-template>
 
 <!-- Create, display, reset username -->
@@ -32,5 +33,4 @@
   Reset username
 </button>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
