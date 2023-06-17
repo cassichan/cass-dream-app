@@ -9,6 +9,6 @@ export class DetailsComponent {
   detailsVisible = false;
 
   displayDetails() {
-    this.detailsVisible = true;
+    this.detailsVisible = !this.detailsVisible;
   }
 }
