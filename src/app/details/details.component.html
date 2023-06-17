@@ -1,2 +1,3 @@
-<button>Display details</button>
-<p>"A dream is a wish your heart makes"</p>
+<button (click)="displayDetails()">Display details</button>
+<!-- Display p only when button is clicked -->
+<p *ngIf="detailsVisible === true">"A dream is a wish your heart makes"</p>
