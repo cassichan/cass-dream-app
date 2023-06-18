@@ -1,3 +1,7 @@
 <button (click)="clickButton()">Display details</button>
 <p *ngIf="detailsVisible === true">"A dream is a wish your heart makes"</p>
-<p>"Button was clicked {{ totalButtonClicks }} times"</p>
+<p *ngFor="let click of buttonClicks">
+  Button click # {{ click }}
+  <!-- [ngStyle]="{ backgroundColor: 'blue' }" -->
+  <!-- [ngClass]="{specialItem: itemNumber >= 5 }" -->
+</p>
