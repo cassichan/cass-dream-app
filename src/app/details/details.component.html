@@ -1,4 +1,4 @@
-<button (click)="clickButton()">Display details</button>
+<button (click)="toggleDetailsAndCountClicks()">Display details</button>
 <p *ngIf="detailsVisible === true">"A dream is a wish your heart makes"</p>
 <p
   *ngFor="let click of buttonClicks; let i = index"

@@ -14,12 +14,10 @@ import { Component } from '@angular/core';
 export class DetailsComponent {
   detailsVisible = false;
   buttonClicks = [];
-  clickNumber = 0;
 
-  clickButton() {
+  toggleDetailsAndCountClicks() {
     this.addButtonClicks();
     this.displayDetails();
-    this.clickNumber += 1;
   }
 
   displayDetails() {
@@ -29,6 +27,6 @@ export class DetailsComponent {
   addButtonClicks() {
     // this.buttonClicks.push(this.buttonClicks.length + 1);
     this.buttonClicks.push(new Date())
-    this.clickNumber += 1;
+
   }
 }
