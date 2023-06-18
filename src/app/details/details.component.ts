@@ -14,17 +14,20 @@ import { Component } from '@angular/core';
 export class DetailsComponent {
   detailsVisible = false;
   buttonClicks = [];
+  clickNumber = 0;
 
   clickButton() {
     this.addButtonClicks();
     this.displayDetails();
+    this.clickNumber += 1;
   }
 
   displayDetails() {
     this.detailsVisible = !this.detailsVisible;
   }
 
- addButtonClicks() {
+  addButtonClicks() {
     this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.clickNumber += 1;
   }
 }

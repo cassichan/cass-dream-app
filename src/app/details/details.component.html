@@ -1,7 +1,10 @@
 <button (click)="clickButton()">Display details</button>
 <p *ngIf="detailsVisible === true">"A dream is a wish your heart makes"</p>
-<p *ngFor="let click of buttonClicks">
+<p
+  *ngFor="let click of buttonClicks"
+  [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'white' }"
+>
   Button click # {{ click }}
-  <!-- [ngStyle]="{ backgroundColor: 'blue' }" -->
-  <!-- [ngClass]="{specialItem: itemNumber >= 5 }" -->
 </p>
+
+<!-- [ngClass]="{ specialItem: itemNumber >= 5 }" -->
