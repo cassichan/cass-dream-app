@@ -3,8 +3,7 @@
 <p
   *ngFor="let click of buttonClicks"
   [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ specialItem: click >= 5 }"
 >
   Button click # {{ click }}
 </p>
-
-<!-- [ngClass]="{ specialItem: itemNumber >= 5 }" -->
