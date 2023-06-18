@@ -3,13 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styles: [
-    `
-      .specialItem {
-        color: white;
-      }
-    `,
-  ],
+  styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent {
   detailsVisible = false;
@@ -26,7 +20,6 @@ export class DetailsComponent {
 
   addButtonClicks() {
     // this.buttonClicks.push(this.buttonClicks.length + 1);
-    this.buttonClicks.push(new Date())
-
+    this.buttonClicks.push(new Date());
   }
 }
