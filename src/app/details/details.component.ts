@@ -27,7 +27,8 @@ export class DetailsComponent {
   }
 
   addButtonClicks() {
-    this.buttonClicks.push(this.buttonClicks.length + 1);
+    // this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.buttonClicks.push(new Date())
     this.clickNumber += 1;
   }
 }
