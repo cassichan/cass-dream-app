@@ -8,6 +8,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { ServerElementComponent } from './server-element/server-element.component';
+import { ServerContainmentComponent } from './server-containment/server-containment.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { DetailsComponent } from './details/details.component';
     WarningAlertComponent,
     SuccessAlertComponent,
     DetailsComponent,
+    ServerElementComponent,
+    ServerContainmentComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
