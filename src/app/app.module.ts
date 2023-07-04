@@ -9,7 +9,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { ServerElementComponent } from './server-element/server-element.component';
-import { ServerContainmentComponent } from './server-containment/server-containment.component';
+import { ServerControlComponent } from './server-control/server-control.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ServerContainmentComponent } from './server-containment/server-containm
     SuccessAlertComponent,
     DetailsComponent,
     ServerElementComponent,
-    ServerContainmentComponent,
+    ServerControlComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
