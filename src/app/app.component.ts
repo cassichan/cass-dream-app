@@ -3,23 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: [
-    `
-      h3 {
-        color: dodgerblue;
-      }
-    `,
-  ],
+ styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  servers = [];
+  serverElements = [];
+  newServerName = '';
+  newServerContent = '';
 
   onAddServer() {
-    this.servers.push('Another Server');
+    this.serverElements.push({
+      type: 'server',
+      name: this.newServerName,
+      content: this.newServerContent,
+    });
   }
 
-  onRemoveServer(id: number) {
-    const position = id;
-    this.servers.splice(position, 1);
+  onAddBlueprint() {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: this.newServerName,
+      content: this.newServerContent,
+    });
   }
 }

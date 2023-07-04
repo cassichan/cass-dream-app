@@ -1,25 +1,32 @@
 <div class="container">
   <div class="row">
-    <div class="" col-xs-12>
-      <!-- <div class="app-servers"></div> -->
-      <!-- <app-success-alert></app-success-alert>
-      <app-warning-alert></app-warning-alert> -->
-      <h2>My Servers</h2>
+    <div class="col-xs-12">
+      <p>Add new Servers or blueprints!</p>
+      <label>Server name</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerName" />
+      <label>Server Content</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerContent" />
+      <br />
       <button class="btn btn-primary" (click)="onAddServer()">
         Add Server
       </button>
-      <br /><br />
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          *ngFor="let server of servers; let i = index"
-          (click)="onRemoveServer(i)"
-        >
-          {{ server }}
-        </li>
-      </ul>
+      <button class="btn btn-primary" (click)="onAddBlueprint()">
+        Add Server Blueprint
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="panel panel-default" *ngFor="let element of serverElements">
+      <div class="panel-heading">{{ element.name }}</div>
+      <div class="panel-body">
+        <p>
+          <strong *ngIf="element.type === 'server'" style="color: red">{{
+            element.content
+          }}</strong>
+          <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+        </p>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- <app-details></app-details> -->

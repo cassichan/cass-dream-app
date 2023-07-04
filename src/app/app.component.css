@@ -1,3 +1,11 @@
-h3 {
+.container {
+  margin-top: 70px
+}
+
+p {
   color: blue;
+}
+
+.btn {
+  margin: 2px;
 }
