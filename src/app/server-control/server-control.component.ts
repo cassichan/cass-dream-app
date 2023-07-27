@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ServerControlComponent {
   //serverCreated and blueprintCreated are events, which are emitted from server-control component.
-  @Output() serverCreated = new EventEmitter<{
+  @Output('sCreated') serverCreated = new EventEmitter<{
     serverName: string;
     serverContent: string;
   }>(); //generic type
