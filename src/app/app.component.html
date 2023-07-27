@@ -1,5 +1,9 @@
 <div class="container">
-  <app-server-control></app-server-control>
+  <!-- Once serverCreated event is emitted from server-control-component, calls onServerAdded method and capture data from the event with $event -->
+  <app-server-control
+  (serverCreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-server-control>
   <hr />
   <div class="row">
     <div class="col-xs-12">
