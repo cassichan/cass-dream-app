@@ -6,27 +6,26 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./server-control.component.css'],
 })
 export class ServerControlComponent {
-  //serverCreated and blueprintCreated are events, which are emitted from server-control component.
-  @Output('sCreated') serverCreated = new EventEmitter<{
+ @Output() serverCreated = new EventEmitter<{
     serverName: string;
     serverContent: string;
-  }>(); //generic type
-  @Output() blueprintCreated = new EventEmitter<{
-    blueprintName: string;
-    blueprintContent: string;
   }>();
-  newServerName = '';
+  @Output() blueprintCreated = new EventEmitter<{
+    serverName: string;
+    serverContent: string;
+  }>();
   newServerContent = '';
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
-      serverName: this.newServerName,
+      serverName: nameInput.value,
       serverContent: this.newServerContent,
     });
+    console.log(nameInput);
   }
-  onAddBlueprint() {
+  onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
-      blueprintName: this.newServerName,
-      blueprintContent: this.newServerContent,
+      serverName: nameInput.value,
+      serverContent: this.newServerContent,
     });
   }
 }

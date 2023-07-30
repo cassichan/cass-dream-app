@@ -1,7 +1,6 @@
 <div class="container">
-  <!-- Once serverCreated event is emitted from server-control-component, calls onServerAdded method and capture data from the event with $event -->
   <app-server-control
-  (sCreated)="onServerAdded($event)"
+  (serverCreated)="onServerAdded($event)"
   (blueprintCreated)="onBlueprintAdded($event)"
   ></app-server-control>
   <hr />
