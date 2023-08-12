@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -11,6 +17,7 @@ export class ServerElementComponent implements OnInit, OnChanges {
     name: string;
     content: string;
   };
+  @Input() name: string;
 
   constructor() {
     console.log('constructor called');
@@ -19,7 +26,6 @@ export class ServerElementComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called');
     console.log(changes);
-    //object with current value, previousValue, firstChange of Input bound property
   }
   ngOnInit() {
     console.log('ngOnInit called');

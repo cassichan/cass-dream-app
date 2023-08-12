@@ -22,7 +22,6 @@ export class ServerControlComponent {
       serverName: nameInput.value,
       serverContent: this.serverContentInput.nativeElement.value,
     });
-    console.log(this.serverContentInput)
   }
   onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
