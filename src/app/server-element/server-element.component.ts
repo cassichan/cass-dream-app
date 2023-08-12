@@ -54,6 +54,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called');
+     //Have access to template elements & their values after the view has been initialized. Will not work in ngOnInit (has not been rendered yet)
+     console.log(this.header.nativeElement.textContent)
   }
 
   ngAfterViewChecked() {
