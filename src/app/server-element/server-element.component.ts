@@ -5,11 +5,13 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  ElementRef,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
   SimpleChanges,
+  ViewChild,
 } from '@angular/core';
 
 @Component({
@@ -24,6 +26,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
     content: string;
   };
   @Input() name: string;
+  @ViewChild('heading', {static: true}) header: ElementRef;
 
   constructor() {
     console.log('constructor called');

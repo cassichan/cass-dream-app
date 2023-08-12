@@ -14,9 +14,7 @@ export class ServerControlComponent {
     serverName: string;
     serverContent: string;
   }>();
-  // newServerName = '';
-  // newServerContent = '';
-  @ViewChild('serverContentInput') serverContentInput : ElementRef;
+  @ViewChild('serverContentInput', {static: true}) serverContentInput : ElementRef;
   onAddServer(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
       serverName: nameInput.value,
