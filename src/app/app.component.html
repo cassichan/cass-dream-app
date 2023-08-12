@@ -1,25 +1,7 @@
 <div class="container">
-  <app-game-control></app-game-control>
-  <!-- <app-server-control
-  (serverCreated)="onServerAdded($event)"
-  (blueprintCreated)="onBlueprintAdded($event)"
-  ></app-server-control>
-  <div class="row">
-    <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="onChangeFirst()">Change first element</button>
-      <button class="btn btn-primary" style="background-color: red;" (click)="onDestroyFirst()">Destroy first element</button>
-      <app-server-element
-        *ngFor="let serverElement of serverElements"
-        [name]="serverElement.name"
-      >
-      <p #contentParagraph>
-        <strong *ngIf="serverElement.type === 'server'" style="color: red">{{
-          serverElement.content
-        }}</strong>
-        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
-      </p>
-
-    </app-server-element>
-    </div>
-  </div> -->
+  <app-game-control
+    (intervalFired)="onIntervalFired($event)"
+  ></app-game-control>
+  <app-game-odd *ngFor="let oddGame of oddGames" [numberGame]="oddGame"></app-game-odd>
+  <app-game-even *ngFor="let evenGame of evenGames" [numberGame]="evenGame"></app-game-even>
 </div>
