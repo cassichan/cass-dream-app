@@ -1,7 +1,27 @@
 <div class="container">
-  <app-game-control
+  <div class="row">
+    <div class="div col-xs-12">
+      <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">
+        Show only odd or only even numbers
+      </button>
+      <br /><br />
+      <ul class="list-group">
+        <div *ngIf="onlyOdd">
+          <li class="list-group-item" *ngFor="let odd of oddNumbers">
+            {{ odd }}
+          </li>
+        </div>
+        <div *ngIf="!onlyOdd">
+          <li class="list-group-item" *ngFor="let even of evenNumbers">
+            {{ even }}
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <!-- <app-game-control
     (intervalFired)="onIntervalFired($event)"
   ></app-game-control>
   <app-game-odd *ngFor="let oddGame of oddGames" [numberGame]="oddGame"></app-game-odd>
-  <app-game-even *ngFor="let evenGame of evenGames" [numberGame]="evenGame"></app-game-even>
+  <app-game-even *ngFor="let evenGame of evenGames" [numberGame]="evenGame"></app-game-even> -->
 </div>

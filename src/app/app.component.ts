@@ -6,18 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  oddNumbers = [1, 3, 5];
+  evenNumbers = [2, 4];
+  onlyOdd = false;
+
 
   //GameControl code
-  oddGames: number[] = [];
-  evenGames: number[] = [];
+  // oddGames: number[] = [];
+  // evenGames: number[] = [];
 
-  onIntervalFired(firedNumber: number) {
-    if (firedNumber % 2 === 0) {
-      this.evenGames.push(firedNumber);
-    } else {
-      this.oddGames.push(firedNumber);
-    }
-  }
+  // onIntervalFired(firedNumber: number) {
+  //   if (firedNumber % 2 === 0) {
+  //     this.evenGames.push(firedNumber);
+  //   } else {
+  //     this.oddGames.push(firedNumber);
+  //   }
+  // }
 
   //Servers code
   // serverElements = [
